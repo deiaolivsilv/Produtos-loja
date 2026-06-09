@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 function Produto(){
@@ -6,11 +7,12 @@ function Produto(){
     const [foto, setFoto] = useState()
     const [preco, setPreco] =useState()
 
+ const {id} = useParams()
 
     useEffect(
         () => {
             async function buscarDados(){
-                const resposta = await fetch('https://dummyjson.com/products/1')
+                const resposta = await fetch('https://dummyjson.com/products/'+id)
                 const dados = await resposta.json()
                 setTitulo(dados.title)
                 setPreco(dados.price)
