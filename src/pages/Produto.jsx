@@ -7,6 +7,8 @@ function Produto(){
     const [foto, setFoto] = useState()
     const [preco, setPreco] =useState()
     const [ produto, setProduto] = useState({})
+    const [estoque, setEstoque] = useState()
+
 
  const {id} = useParams()
 
@@ -19,7 +21,9 @@ function Produto(){
                 setTitulo(dados.title)
                 setPreco(dados.price)
                 setFoto(dados.images)
-            }     
+                setEstoque(dados.stock)
+            }
+
             buscarDados()
         }
     , [])
@@ -32,11 +36,15 @@ function Produto(){
 <div className="caixa">
     <img src={foto}/>
 
+    <div className="descricaoProd">
 
-    <p className="preco">Preço do produto: {preco}</p>
-
+        <p className="preco">Preço do produto: {preco}</p>
+        <p className="descricao">{produto.description} </p>
+        <p>estoque: {estoque}</p>
+    </div>
 </div>
-    <p className="descricao">{produto.description} </p>
+
+   
     </>
 
 
