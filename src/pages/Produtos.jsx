@@ -28,7 +28,7 @@ function Produtos(){
         <h2> Produtos</h2>
 
 
-        <ul>
+        <ul className="produtos">
         {produtos.map(
             (prod) => (
                 <li> 

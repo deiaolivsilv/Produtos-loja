@@ -8,5 +8,13 @@ body{
 }
 
 img {
-  width: 40%;
+  width: 30%;
 }
+
+.produtos { display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+
+
