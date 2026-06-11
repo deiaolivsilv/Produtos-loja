@@ -27,11 +27,16 @@ function Produto(){
 
     return <>
     <h2>{titulo}</h2>
+
+
+<div className="caixa">
     <img src={foto}/>
 
 
-    <p>Preço do produto: {preco}</p>
-    <p >{produto.description} </p>
+    <p className="preco">Preço do produto: {preco}</p>
+
+</div>
+    <p className="descricao">{produto.description} </p>
     </>
 
 
