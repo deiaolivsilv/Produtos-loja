@@ -40,7 +40,7 @@ function Produto(){
 
         <p className="preco">Preço do produto: {preco}</p>
         <p className="descricao">{produto.description} </p>
-        <p>estoque: {estoque}</p>
+        <p>Estoque: {estoque}</p>
     </div>
 </div>
 
