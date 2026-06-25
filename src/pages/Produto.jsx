@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
+
 function Produto(){
     const [titulo, setTitulo] = useState()
     const [foto, setFoto] = useState()
@@ -9,6 +10,10 @@ function Produto(){
     const [ produto, setProduto] = useState({})
     const [estoque, setEstoque] = useState()
 
+
+    const fotoStyle = {
+        minWidth: '500px',
+    }
 
  const {id} = useParams()
 
@@ -29,12 +34,15 @@ function Produto(){
     , [])
 
 
-    return <>
-    <h2>{titulo}</h2>
+    return <div className="tudo">
 
 
 <div className="caixa">
-    <img src={foto}/>
+    <div>
+    <h2 className="Titulo">{titulo}</h2>    
+        
+    <img src={foto} style={fotoStyle    } />
+    </div>
 
     <div className="descricaoProd">
 
@@ -45,7 +53,7 @@ function Produto(){
 </div>
 
    
-    </>
+    </div>
 
 
 

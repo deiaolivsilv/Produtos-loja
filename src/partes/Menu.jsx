@@ -1,12 +1,38 @@
+import { Link } from "react-router-dom";
+
+
+const estilo = {
+    color:'blue',
+    display: 'flex',
+   
+    listStyleType: 'none',
+    
+  justifyContent: 'space-around',
+
+}
+const li =  {
+    backgroundColor: '#ccc',
+    
+}
+
+
 function Menu(){
     return <>
-        <ul>
-            <li>
-                Produtos
-                 
+        <ul style={estilo}>
+            <li style={li}>
+                <Link to="/">                
+                    Produtos
+                </Link>
             </li>
-            <li>
-                Usuários
+            <li style={li}>
+                <Link to="/descrever">                
+                    Descrever
+                </Link>
+            </li>
+            <li style={li}>
+                <Link to="/usuarios">
+                    Usuários
+                </Link>
             </li>
         </ul>
     </>
